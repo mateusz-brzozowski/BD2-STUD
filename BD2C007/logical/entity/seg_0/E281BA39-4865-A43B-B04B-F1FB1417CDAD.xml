@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E281BA39-4865-A43B-B04B-F1FB1417CDAD" name="Przedmiot">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:46:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera wszystkie dostępne przedmioty w szkole wyższej. Przedmioty są przypisane do kierunków, podzielone na kategorie tematyczne oraz możemy utworzyć dla każdego przedmiotu konspekt o standardowej budowie.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Przedmioty</preferredAbbreviation>
+<shortName>PRZED</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="kod przedmiotu" id="1920E7B5-55C0-CDF2-3143-2258D66249FB">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:50:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania przedmiotów np. BD2 - skrócona nazwa przedmiotu Bazy danych 2.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="637DEAAC-1EEB-8DC9-3268-5F12BC99E1A2">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:21 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod kierunku" id="379151AE-EF71-28B0-F7E6-1B1982F7020B">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:37 UTC</createdTime>
+<generatorID>351D59A8-356C-EE58-EF5E-B8316DDA68BA</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referedAttribute>A2ECED09-4EDF-7751-ABB3-A22557D6C030</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod kategorii" id="DA0A77F5-3B7B-627E-9333-ADBF845C5FB8">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:52:00 UTC</createdTime>
+<generatorID>D16A3CDB-A3AF-FF6D-20A2-099C4EE8F9B0</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referedAttribute>E484281E-AE3A-113C-4F91-5FE34ABF5122</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="C569F6A8-B473-8ECF-3EC5-3B38239871E5">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:25 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D3A19C85-D02C-35B6-DED9-45286D14FA99" name="Przedmiot PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:16 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1920E7B5-55C0-CDF2-3143-2258D66249FB</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="2D7ECD6C-683B-7AFE-7BF8-4AACF554691F" name="Nazwa przedmiotu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 08:03:06 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<newElementsIDs>637DEAAC-1EEB-8DC9-3268-5F12BC99E1A2</newElementsIDs>
+<usedAttributes>
+<attributeRef>637DEAAC-1EEB-8DC9-3268-5F12BC99E1A2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

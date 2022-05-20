@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_6" directorySegmentName="seg_0" id="45680DAA-75A0-7036-1299-E0A31CBAF6A4">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-24 09:17:46 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<targetTransferable>false</targetTransferable>
+<sourcePk>AF1F5F5E-3C66-BCEE-4C67-1A5F1B1BB6E6</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>wchodzi w skład</nameOnSource>
+<nameOnTarget>składa się z</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F5B92A6A-B183-D4E4-068B-3C36FFE2F68A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0FBAB688-644B-99E7-2975-4634DFD0C71B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

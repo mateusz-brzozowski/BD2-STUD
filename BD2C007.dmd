@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BD2C007" id="2E1663EA-E280-E7D9-3BC5-ECD73132D6D2" version="3.5">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:44:55 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>2E1663EA-E280-E7D9-3BC5-ECD73132D6D2</designId>
+</OSDM_Design>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11C8F569-740D-BFA4-AD84-EBD65C2BDAEC" name="Kierunek">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:51:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera wszystkie dostępne kierunki w szkole wyższej np. Informatyka.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Kierunki</preferredAbbreviation>
+<shortName>KIER</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="kod kierunku" id="A2ECED09-4EDF-7751-ABB3-A22557D6C030">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania kierunków np. INF - skrócona nazwa kierunku informatyka.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="F6911253-0730-144D-205C-73F55068C488">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:38 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="1954619A-995E-F7E5-E90F-6D4FB07D98A4">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:38 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5D22BFE-44B5-48B6-87D6-EB37B5F5E8E3" name="Kierunek PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:34 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A2ECED09-4EDF-7751-ABB3-A22557D6C030</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="3AB73E7C-96CB-5ACA-37C3-283362395E3B" name="Nazwa kierunku">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 08:02:21 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<newElementsIDs>F6911253-0730-144D-205C-73F55068C488</newElementsIDs>
+<usedAttributes>
+<attributeRef>F6911253-0730-144D-205C-73F55068C488</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

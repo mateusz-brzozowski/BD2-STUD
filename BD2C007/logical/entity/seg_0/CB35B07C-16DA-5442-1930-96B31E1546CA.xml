@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CB35B07C-16DA-5442-1930-96B31E1546CA" name="Kategoria tematyczna">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:51:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera wszystkie dostępne kategorie tematyczne, względem których przedmioty są podzielone i pogrupowane np. Przedmioty ekonomiczno - społeczne.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Kategorie tematyczne</preferredAbbreviation>
+<shortName>KATTEM</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="kod kategorii" id="E484281E-AE3A-113C-4F91-5FE34ABF5122">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania kategorii tematycznych np. MAT - skrócona nazwa kategorii tematycznej Matematyka.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="8D354985-7E2F-E0F8-E9EF-40C4E3A8F66D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:57 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="0E0DE0B6-B916-DF83-C24D-E8F93188AD11">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:54:57 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6885C427-71CF-EC25-1422-BC99621FF617" name="Kategoria tematyczna PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:59 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E484281E-AE3A-113C-4F91-5FE34ABF5122</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="2A1EDA6F-C248-D86D-0F45-335F516FBA85" name="Nazwa kategorii tematycznej">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 08:03:39 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<newElementsIDs>8D354985-7E2F-E0F8-E9EF-40C4E3A8F66D</newElementsIDs>
+<usedAttributes>
+<attributeRef>8D354985-7E2F-E0F8-E9EF-40C4E3A8F66D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

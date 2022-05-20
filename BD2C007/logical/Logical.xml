@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="922E3571-26F0-5D5C-245E-687F954552FE" mainViewID="333AA02A-3348-33D0-4FEA-F1BE6E1D6AAC">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:44:55 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

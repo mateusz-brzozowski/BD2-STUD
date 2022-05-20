@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F5B92A6A-B183-D4E4-068B-3C36FFE2F68A" name="Część konspektu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-24 09:17:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nagłówki dla elementów konspektu. Zawiera wszystkie możliwe tytuły, które mogą występować w konspekcie oraz ich kolejność występowania w konspekcie.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Czesci konspektu</preferredAbbreviation>
+<shortName>CZKON</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="kod części" id="53B9B9BC-F236-55E3-BBA8-384837B75868">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-12 18:02:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania części konspektu np. LAB - skrócona nazwa części konspektu Laboratoria.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr kolejny" id="DB82E17C-13B3-D882-2F55-BB9E9AD41E74">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-24 09:17:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kolejność występowania elementu konspektu w całym konspekcie.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tytuł" id="B9DD6A08-86C5-7CFF-D866-AA7C6928ED4D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-24 09:17:04 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AF1F5F5E-3C66-BCEE-4C67-1A5F1B1BB6E6" name="Część konspektu PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 08:03:54 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>53B9B9BC-F236-55E3-BBA8-384837B75868</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="400E75A4-D2A0-45AD-1504-3B40CCA8F8BF" name="Nr kolejny części konspektu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-12 18:03:07 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<newElementsIDs>DB82E17C-13B3-D882-2F55-BB9E9AD41E74</newElementsIDs>
+<usedAttributes>
+<attributeRef>DB82E17C-13B3-D882-2F55-BB9E9AD41E74</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="8A6B7722-1759-4AA6-F6EC-0E121D195396" name="Tytuł części konepsktu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-12 18:10:34 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<newElementsIDs>B9DD6A08-86C5-7CFF-D866-AA7C6928ED4D</newElementsIDs>
+<usedAttributes>
+<attributeRef>B9DD6A08-86C5-7CFF-D866-AA7C6928ED4D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

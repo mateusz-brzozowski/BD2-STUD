@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="7F89B9B7-EB03-D291-4F1F-207B94733277">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:44:56 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

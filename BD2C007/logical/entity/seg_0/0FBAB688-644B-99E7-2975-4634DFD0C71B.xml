@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0FBAB688-644B-99E7-2975-4634DFD0C71B" name="Element konspektu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:51:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera elementy konspektu, dla których dobieramy część konspektu, czyli nagłówek dla tych elementów oraz dobieramy przedmiot, dla którego tworzony jest konspekt np. dla przedmiotu „Bazy Danych 2” i części konspektu „Wykład”, element konspektu zawiera treść „Zakres projektu”.]]></commentInRDBMS>
+<ownerDesignName>BD2C007</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Elementy konspektu</preferredAbbreviation>
+<shortName>ELKON</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="treść" id="E0D1BAD9-2891-B428-BBEC-8507843DEC6F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:53:57 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod przedmiotu" id="166194AC-1A5A-A387-8013-31DAA5638E7C">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-08 07:51:18 UTC</createdTime>
+<generatorID>D6E35D29-8808-F4CA-864E-4A697BB984B1</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referedAttribute>1920E7B5-55C0-CDF2-3143-2258D66249FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod części" id="DE0EF6D6-4F48-CCD4-E8A9-AF810F4AFAE1">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-12 18:18:13 UTC</createdTime>
+<generatorID>45680DAA-75A0-7036-1299-E0A31CBAF6A4</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referedAttribute>53B9B9BC-F236-55E3-BBA8-384837B75868</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="181BC03E-125F-9643-D1C8-E0FAE3E172DF" name="Element konspektu PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-04-12 17:57:32 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>166194AC-1A5A-A387-8013-31DAA5638E7C</attributeRef>
+<attributeRef>DE0EF6D6-4F48-CCD4-E8A9-AF810F4AFAE1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

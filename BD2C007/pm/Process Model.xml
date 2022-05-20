@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="64D53AA2-61F2-C980-3537-AEA7BEECC63D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-03-19 22:44:55 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>
