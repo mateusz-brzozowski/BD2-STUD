@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="BD2C007" directorySegmentName="seg_0" id="CFC3CF71-6E0A-3623-C3C2-808959E20A1D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:53:25 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<identifier>05687088D51ED50CEBA21A3C6CB904EA92</identifier>
+</UserOraclev10g>

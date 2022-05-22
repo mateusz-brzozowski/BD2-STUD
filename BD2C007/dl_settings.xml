@@ -111,9 +111,9 @@
 			<font_object fo_type="Comments" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Table" background="-76" foreground="-16776961" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Table" background="16777215" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
-			<font_object fo_type="Title" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="Title" font_color="-16777216" font_name="Dialog" font_size="10" font_style="1" id="1"/>
 			<font_object fo_type="Column" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="2"/>
 			<font_object fo_type="Datatype" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
 			<font_object fo_type="PK Element" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
@@ -172,7 +172,7 @@
 			<font_object fo_type="Function" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="20"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Process" background="-106" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Process" background="16777215" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
 			<font_object fo_type="Title" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
 			<font_object fo_type="Process Number" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="22"/>
@@ -299,7 +299,7 @@
 	<engineering_params>
 		<delete_without_origin value="false"/>
 		<engineer_coordinates value="true"/>
-		<engineer_generated value="false"/>
+		<engineer_generated value="true"/>
 		<show_engineering_intree value="false"/>
 		<apply_naming_std value="true"/>
 		<use_pref_abbreviation value="true"/>
@@ -391,6 +391,14 @@
 	<model_compare_storage_props_filter>
 	</model_compare_storage_props_filter>
 	<naming_options>
+		<model_options objectid="53B86B75-52C9-5240-595B-B78C777C85CB">
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+		</model_options>
 		<model_options objectid="922E3571-26F0-5D5C-245E-687F954552FE">
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Entity" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Attribute" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
@@ -413,5 +421,16 @@
 			<collection_types value="70"/>
 			<distinct_types value="70"/>
 		</data_types_model_estimates>
+		<relational_model_estimates>
+			<relational_model_0_estimates>
+				<relational_model_name value="Relational_1"/>
+				<tables value="70"/>
+				<views value="70"/>
+				<foreign_keys value="70"/>
+				<schemas value="70"/>
+				<subviews value="70"/>
+				<arcs value="70"/>
+			</relational_model_0_estimates>
+		</relational_model_estimates>
 	</design_estimates>
 </settings>

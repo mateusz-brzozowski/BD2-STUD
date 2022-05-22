@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="BD2C007_APP" directorySegmentName="seg_0" id="620550E4-067D-8C90-4E5B-B9D5029244FE">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:53:16 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<identifier>0515CD45956634DD1E5D935E66437FD0D3</identifier>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="36E3415B-5E1F-4580-A4EF-2DB8BFA732CE">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:55:08 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>98E8D54D-CDB7-D50A-1B55-97D973DEBDA2</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="E703ADBE-3D2E-745B-02FA-CCDB8C1AD209">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:55:46 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>6BAE3275-0015-CB07-305E-FC3493F1EB61</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="933F0D2B-CCC4-2165-8FD9-ABEE24773794">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:56:25 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>05358BF5-28F3-7660-2757-5AA5C894AABE</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="C395B4B2-BE99-AFEE-708E-33B43ADF67F7">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:57:25 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>50F08633-CDEA-0385-ACCD-D4327E6A365E</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="B274C5A0-EEC6-59B9-B640-230DC3138D18">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:57:40 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>F192488F-09E7-5767-BAA1-FBC5739CC74D</table>
+</Permission>
+</permissions>
+</UserOraclev10g>

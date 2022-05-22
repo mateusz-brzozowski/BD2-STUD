@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="98E8D54D-CDB7-D50A-1B55-97D973DEBDA2" name="Czesci_konspektu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nagłówki dla elementów konspektu. Zawiera wszystkie możliwe tytuły, które mogą występować w konspekcie oraz ich kolejność występowania w konspekcie.]]></commentInRDBMS>
+<generatorID>F5B92A6A-B183-D4E4-068B-3C36FFE2F68A</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<abbreviation>CZKON</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kod_czesci" id="46F24917-45B5-EDAE-2A3C-C24F7F9E7970">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania części konspektu np. LAB - skrócona nazwa części konspektu Laboratoria.]]></commentInRDBMS>
+<generatorID>53B9B9BC-F236-55E3-BBA8-384837B75868</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_kolejny" id="8F10E886-A931-B2A7-C11A-275392524446">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kolejność występowania elementu konspektu w całym konspekcie.]]></commentInRDBMS>
+<generatorID>DB82E17C-13B3-D882-2F55-BB9E9AD41E74</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementIncrementBy>1000</autoIncrementIncrementBy>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tytuł" id="4EC32E34-1599-61D5-333B-33DF2669D828">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>B9DD6A08-86C5-7CFF-D866-AA7C6928ED4D</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A21E01D8-49FA-C417-E99F-8C8BC9B0F8C8" name="Czesci_konspektu_PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>AF1F5F5E-3C66-BCEE-4C67-1A5F1B1BB6E6</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46F24917-45B5-EDAE-2A3C-C24F7F9E7970"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C1469C2-4546-878A-E99E-BFA7E770DE83" name="Czesci_konspektu_nr_kolejny_UN">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>400E75A4-D2A0-45AD-1504-3B40CCA8F8BF</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F10E886-A931-B2A7-C11A-275392524446"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="467697F4-7B66-0EF7-F3B4-52228146F3CA" name="Czesci_konspektu_tytuł_UN">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>8A6B7722-1759-4AA6-F6EC-0E121D195396</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EC32E34-1599-61D5-333B-33DF2669D828"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

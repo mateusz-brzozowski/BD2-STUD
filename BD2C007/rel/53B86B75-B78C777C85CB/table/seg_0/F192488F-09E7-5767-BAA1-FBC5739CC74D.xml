@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F192488F-09E7-5767-BAA1-FBC5739CC74D" name="Przedmioty">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera wszystkie dostępne przedmioty w szkole wyższej. Przedmioty są przypisane do kierunków, podzielone na kategorie tematyczne oraz możemy utworzyć dla każdego przedmiotu konspekt o standardowej budowie.]]></commentInRDBMS>
+<generatorID>E281BA39-4865-A43B-B04B-F1FB1417CDAD</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<abbreviation>PRZED</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kod_przedmiotu" id="ADF32ED3-C049-FF03-3EC1-03501B5B7A33">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania przedmiotów np. BD2 - skrócona nazwa przedmiotu Bazy danych 2.]]></commentInRDBMS>
+<generatorID>1920E7B5-55C0-CDF2-3143-2258D66249FB</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="045B4965-C268-30D7-E938-9A4D771E4F42">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>637DEAAC-1EEB-8DC9-3268-5F12BC99E1A2</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kod_kierunku" id="9DE3B838-5105-43F9-0EB2-7A4C168093F1">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>379151AE-EF71-28B0-F7E6-1B1982F7020B</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE3D9915-BFC2-0435-CB14-91B709137E87" referredColumn="C806B9DC-0A6E-570C-4E35-9C4CEEAE61D7"/>
+</associations>
+</Column>
+<Column name="kod_kategorii" id="1A3C4D96-6CE6-EF69-BBAD-8CB1746155CF">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>DA0A77F5-3B7B-627E-9333-ADBF845C5FB8</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC6BE2AA-34DD-B0FB-F8FE-24BEFC636544" referredColumn="B44BFD1B-561C-B1BE-E104-8D3BC0462A90"/>
+</associations>
+</Column>
+<Column name="opis" id="9214275D-BAD5-B566-2063-63F23EAE7FCC">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>C569F6A8-B473-8ECF-3EC5-3B38239871E5</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5C17551-9567-A2FD-5C3D-20EE19D9A240" name="Przedmioty_PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>D3A19C85-D02C-35B6-DED9-45286D14FA99</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADF32ED3-C049-FF03-3EC1-03501B5B7A33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2B6F2D5-A1FB-9E44-B0B9-ECDFAA0CB3E9" name="Przedmioty_nazwa_UN">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>2D7ECD6C-683B-7AFE-7BF8-4AACF554691F</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="045B4965-C268-30D7-E938-9A4D771E4F42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C86D2D7-02A9-2942-A918-A52BD750373D" name="Przedmioty_KIER_IDX">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 20:43:29 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DE3B838-5105-43F9-0EB2-7A4C168093F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFFE49D0-DA3C-5C64-9F76-AE84B3AF2F04" name="Przedmioty_KAT_IDX">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 20:43:29 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A3C4D96-6CE6-EF69-BBAD-8CB1746155CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB1BF1AE-9A73-2989-A859-46BE172AE05C" name="Przed_Kategorie_tematyczne_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>D16A3CDB-A3AF-FF6D-20A2-099C4EE8F9B0</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A3C4D96-6CE6-EF69-BBAD-8CB1746155CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA3A8FB0-07E8-07D0-44FC-394C88DB73C7" name="Przedmioty_Kierunki_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>351D59A8-356C-EE58-EF5E-B8316DDA68BA</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DE3B838-5105-43F9-0EB2-7A4C168093F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

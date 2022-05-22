@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Czesci_konspektu" directorySegmentName="seg_0" id="98E8D54D-CDB7-D50A-1B55-97D973DEBDA2">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="kod_czesci" id="46F24917-45B5-EDAE-2A3C-C24F7F9E7970">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tytuł" id="4EC32E34-1599-61D5-333B-33DF2669D828">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_kolejny" id="8F10E886-A931-B2A7-C11A-275392524446">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Czesci_konspektu_PK" id="A21E01D8-49FA-C417-E99F-8C8BC9B0F8C8">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Czesci_konspektu_nr_kolejny_UN" id="2C1469C2-4546-878A-E99E-BFA7E770DE83">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Czesci_konspektu_tytuł_UN" id="467697F4-7B66-0EF7-F3B4-52228146F3CA">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

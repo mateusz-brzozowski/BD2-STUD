@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Elementy_konspektu" directorySegmentName="seg_0" id="6BAE3275-0015-CB07-305E-FC3493F1EB61">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="treść" id="17A687F5-7511-412F-28CE-E5D01AF3261F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_czesci" id="4B4553C1-DD47-9659-FE44-575992C5169F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_przedmiotu" id="EB0FF48C-5D85-F54A-B231-6497D7111403">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Elementy_konspektu__IDX" id="4C224C89-5363-EA4E-FE0D-315C71347FC8">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="El_konspektu_Przedmioty_FK" id="A0916AB8-4C34-DE52-174E-C4C5823B67B7">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Ele_konspektu_Cz_konspektu_FK" id="CEC0157A-9971-F2CB-045D-18DACA4AB965">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Elementy_konspektu_PK" id="E9D6ACFD-6314-3283-1CE4-794E8DA79A4F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

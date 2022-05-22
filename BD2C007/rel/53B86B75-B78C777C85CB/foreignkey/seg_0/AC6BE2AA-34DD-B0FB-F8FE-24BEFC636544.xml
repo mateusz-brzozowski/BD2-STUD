@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AC6BE2AA-34DD-B0FB-F8FE-24BEFC636544" containerWithKeyObject="F192488F-09E7-5767-BAA1-FBC5739CC74D" localFKIndex="DB1BF1AE-9A73-2989-A859-46BE172AE05C" name="Przed_Kategorie_tematyczne_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>D16A3CDB-A3AF-FF6D-20A2-099C4EE8F9B0</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referredTableLongName>Kategorie tematyczne</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>05358BF5-28F3-7660-2757-5AA5C894AABE</referredTableID>
+<keyObject>E471DAC6-D4DA-6B44-18EF-4DAC4BC61797</keyObject>
+<referredKeyID>E471DAC6-D4DA-6B44-18EF-4DAC4BC61797</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>kod_kategorii</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

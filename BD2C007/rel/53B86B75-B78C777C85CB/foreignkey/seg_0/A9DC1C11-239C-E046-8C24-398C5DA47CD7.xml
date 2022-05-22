@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A9DC1C11-239C-E046-8C24-398C5DA47CD7" containerWithKeyObject="6BAE3275-0015-CB07-305E-FC3493F1EB61" localFKIndex="A0916AB8-4C34-DE52-174E-C4C5823B67B7" name="El_konspektu_Przedmioty_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>D6E35D29-8808-F4CA-864E-4A697BB984B1</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referredTableLongName>Przedmioty</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>F192488F-09E7-5767-BAA1-FBC5739CC74D</referredTableID>
+<keyObject>C5C17551-9567-A2FD-5C3D-20EE19D9A240</keyObject>
+<referredKeyID>C5C17551-9567-A2FD-5C3D-20EE19D9A240</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>kod_przedmiotu</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

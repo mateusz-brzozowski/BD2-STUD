@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Kierunki" directorySegmentName="seg_0" id="50F08633-CDEA-0385-ACCD-D4327E6A365E">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="opis" id="32ED8B3D-E9A8-CED7-17A4-C70DC159E237">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_kierunku" id="C806B9DC-0A6E-570C-4E35-9C4CEEAE61D7">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nazwa" id="CC6701BC-528E-35D3-7150-B1B3B58B4CA8">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Kierunki_PK" id="F9455A08-5070-9B4F-3CCE-C1617EA87B8C">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Kierunki_nazwa_UN" id="BA725DAA-A1D0-AAB3-FD50-60A877686872">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

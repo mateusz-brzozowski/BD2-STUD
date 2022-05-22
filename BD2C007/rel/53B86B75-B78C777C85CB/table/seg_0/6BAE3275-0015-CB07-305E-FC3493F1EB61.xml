@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6BAE3275-0015-CB07-305E-FC3493F1EB61" name="Elementy_konspektu">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera elementy konspektu, dla których dobieramy część konspektu, czyli nagłówek dla tych elementów oraz dobieramy przedmiot, dla którego tworzony jest konspekt np. dla przedmiotu „Bazy Danych 2” i części konspektu „Wykład”, element konspektu zawiera treść „Zakres projektu”.]]></commentInRDBMS>
+<generatorID>0FBAB688-644B-99E7-2975-4634DFD0C71B</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<abbreviation>ELKON</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kod_przedmiotu" id="EB0FF48C-5D85-F54A-B231-6497D7111403">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>166194AC-1A5A-A387-8013-31DAA5638E7C</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9DC1C11-239C-E046-8C24-398C5DA47CD7" referredColumn="ADF32ED3-C049-FF03-3EC1-03501B5B7A33"/>
+</associations>
+</Column>
+<Column name="kod_czesci" id="4B4553C1-DD47-9659-FE44-575992C5169F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>DE0EF6D6-4F48-CCD4-E8A9-AF810F4AFAE1</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D2F5F50-751B-AE3C-4F63-73C746D703F6" referredColumn="46F24917-45B5-EDAE-2A3C-C24F7F9E7970"/>
+</associations>
+</Column>
+<Column name="treść" id="17A687F5-7511-412F-28CE-E5D01AF3261F">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>E0D1BAD9-2891-B428-BBEC-8507843DEC6F</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9D6ACFD-6314-3283-1CE4-794E8DA79A4F" name="Elementy_konspektu_PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>181BC03E-125F-9643-D1C8-E0FAE3E172DF</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB0FF48C-5D85-F54A-B231-6497D7111403"/>
+<colUsage columnID="4B4553C1-DD47-9659-FE44-575992C5169F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C224C89-5363-EA4E-FE0D-315C71347FC8" name="Elementy_konspektu__IDX">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 20:31:40 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B4553C1-DD47-9659-FE44-575992C5169F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0916AB8-4C34-DE52-174E-C4C5823B67B7" name="El_konspektu_Przedmioty_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>D6E35D29-8808-F4CA-864E-4A697BB984B1</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB0FF48C-5D85-F54A-B231-6497D7111403"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CEC0157A-9971-F2CB-045D-18DACA4AB965" name="Ele_konspektu_Cz_konspektu_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>45680DAA-75A0-7036-1299-E0A31CBAF6A4</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B4553C1-DD47-9659-FE44-575992C5169F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

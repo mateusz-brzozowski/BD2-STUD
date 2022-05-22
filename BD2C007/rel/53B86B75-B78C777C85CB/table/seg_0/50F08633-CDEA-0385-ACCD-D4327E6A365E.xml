@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50F08633-CDEA-0385-ACCD-D4327E6A365E" name="Kierunki">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Zawiera wszystkie dostępne kierunki w szkole wyższej np. Informatyka.]]></commentInRDBMS>
+<generatorID>11C8F569-740D-BFA4-AD84-EBD65C2BDAEC</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<abbreviation>KIER</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kod_kierunku" id="C806B9DC-0A6E-570C-4E35-9C4CEEAE61D7">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Kod, który służy do rozróżniania kierunków np. INF - skrócona nazwa kierunku informatyka.]]></commentInRDBMS>
+<generatorID>A2ECED09-4EDF-7751-ABB3-A22557D6C030</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="CC6701BC-528E-35D3-7150-B1B3B58B4CA8">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>F6911253-0730-144D-205C-73F55068C488</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="32ED8B3D-E9A8-CED7-17A4-C70DC159E237">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>1954619A-995E-F7E5-E90F-6D4FB07D98A4</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F9455A08-5070-9B4F-3CCE-C1617EA87B8C" name="Kierunki_PK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>B5D22BFE-44B5-48B6-87D6-EB37B5F5E8E3</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C806B9DC-0A6E-570C-4E35-9C4CEEAE61D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA725DAA-A1D0-AAB3-FD50-60A877686872" name="Kierunki_nazwa_UN">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>3AB73E7C-96CB-5ACA-37C3-283362395E3B</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC6701BC-528E-35D3-7150-B1B3B58B4CA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

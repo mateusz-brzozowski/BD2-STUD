@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0D2F5F50-751B-AE3C-4F63-73C746D703F6" containerWithKeyObject="6BAE3275-0015-CB07-305E-FC3493F1EB61" localFKIndex="CEC0157A-9971-F2CB-045D-18DACA4AB965" name="Ele_konspektu_Cz_konspektu_FK">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-21 14:45:08 UTC</createdTime>
+<generatorID>45680DAA-75A0-7036-1299-E0A31CBAF6A4</generatorID>
+<ownerDesignName>BD2C007</ownerDesignName>
+<referredTableLongName>Czesci_konspektu</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>98E8D54D-CDB7-D50A-1B55-97D973DEBDA2</referredTableID>
+<keyObject>A21E01D8-49FA-C417-E99F-8C8BC9B0F8C8</keyObject>
+<referredKeyID>A21E01D8-49FA-C417-E99F-8C8BC9B0F8C8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>kod_czesci</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

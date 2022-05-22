@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Przedmioty" directorySegmentName="seg_0" id="F192488F-09E7-5767-BAA1-FBC5739CC74D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nazwa" id="045B4965-C268-30D7-E938-9A4D771E4F42">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_kategorii" id="1A3C4D96-6CE6-EF69-BBAD-8CB1746155CF">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="opis" id="9214275D-BAD5-B566-2063-63F23EAE7FCC">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_kierunku" id="9DE3B838-5105-43F9-0EB2-7A4C168093F1">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="kod_przedmiotu" id="ADF32ED3-C049-FF03-3EC1-03501B5B7A33">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Przedmioty_KIER_IDX" id="4C86D2D7-02A9-2942-A918-A52BD750373D">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Przedmioty_KAT_IDX" id="AFFE49D0-DA3C-5C64-9F76-AE84B3AF2F04">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Przedmioty_Kierunki_FK" id="CA3A8FB0-07E8-07D0-44FC-394C88DB73C7">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Przed_Kategorie_tematyczne_FK" id="DB1BF1AE-9A73-2989-A859-46BE172AE05C">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Przedmioty_PK" id="C5C17551-9567-A2FD-5C3D-20EE19D9A240">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Przedmioty_nazwa_UN" id="F2B6F2D5-A1FB-9E44-B0B9-ECDFAA0CB3E9">
+<createdBy>huawei</createdBy>
+<createdTime>2022-05-22 15:52:58 UTC</createdTime>
+<ownerDesignName>BD2C007</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>
