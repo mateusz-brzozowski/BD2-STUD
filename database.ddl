@@ -9,7 +9,7 @@ CREATE USER bd2c007 IDENTIFIED BY ACCOUNT UNLOCK ;
 
 CREATE USER bd2c007_app IDENTIFIED BY ACCOUNT UNLOCK ;
 
-CREATE SEQUENCE NR_KOLEJNY_SEQ 
+CREATE SEQUENCE NR_KOLEJNY_SEQ
 START WITH 1000  INCREMENT BY 1000 MINVALUE 1000 MAXVALUE 99999 NOCACHE ORDER;
 
 -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
@@ -19,18 +19,18 @@ START WITH 1000  INCREMENT BY 1000 MINVALUE 1000 MAXVALUE 99999 NOCACHE ORDER;
 CREATE TABLE czesci_konspektu (
     kod_czesci VARCHAR2(6) NOT NULL,
     nr_kolejny NUMBER(5) DEFAULT ON NULL nr_kolejny_seq.NEXTVAL NOT NULL,
-    tytu≥      VARCHAR2(50) NOT NULL
+    tytu≈Ç      VARCHAR2(50) NOT NULL
 )
 LOGGING;
 
 COMMENT ON TABLE czesci_konspektu IS
-    'Nag≥Ûwki dla elementÛw konspektu. Zawiera wszystkie moøliwe tytu≥y, ktÛre mogπ wystÍpowaÊ w konspekcie oraz ich kolejnoúÊ wystÍpowania w konspekcie.';
+    'Nag≈Ç√≥wki dla element√≥w konspektu. Zawiera wszystkie mo≈ºliwe tytu≈Çy, kt√≥re mogƒÖ wystƒôpowaƒá w konspekcie oraz ich kolejno≈õƒá wystƒôpowania w konspekcie.';
 
 COMMENT ON COLUMN czesci_konspektu.kod_czesci IS
-    'Kod, ktÛry s≥uøy do rozrÛøniania czÍúci konspektu np. LAB - skrÛcona nazwa czÍúci konspektu Laboratoria.';
+    'Kod, kt√≥ry s≈Çu≈ºy do rozr√≥≈ºniania czƒô≈õci konspektu np. LAB - skr√≥cona nazwa czƒô≈õci konspektu Laboratoria.';
 
 COMMENT ON COLUMN czesci_konspektu.nr_kolejny IS
-    'KolejnoúÊ wystÍpowania elementu konspektu w ca≥ym konspekcie.';
+    'Kolejno≈õƒá wystƒôpowania elementu konspektu w ca≈Çym konspekcie.';
 
 GRANT DELETE, INSERT, SELECT, UPDATE ON czesci_konspektu TO bd2c007_app;
 
@@ -38,17 +38,17 @@ ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_pk PRIMARY KEY ( ko
 
 ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_nr_kolejny_un UNIQUE ( nr_kolejny );
 
-ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_tytu≥_un UNIQUE ( tytu≥ );
+ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_tytu≈Ç_un UNIQUE ( tytu≈Ç );
 
 CREATE TABLE elementy_konspektu (
     kod_przedmiotu VARCHAR2(8) NOT NULL,
     kod_czesci     VARCHAR2(6) NOT NULL,
-    treúÊ          VARCHAR2(4000)
+    tre≈õƒá          VARCHAR2(4000)
 )
 LOGGING;
 
 COMMENT ON TABLE elementy_konspektu IS
-    'Zawiera elementy konspektu, dla ktÛrych dobieramy czÍúÊ konspektu, czyli nag≥Ûwek dla tych elementÛw oraz dobieramy przedmiot, dla ktÛrego tworzony jest konspekt np. dla przedmiotu ÑBazy Danych 2î i czÍúci konspektu ÑWyk≥adî, element konspektu zawiera treúÊ ÑZakres projektuî.';
+    'Zawiera elementy konspektu, dla kt√≥rych dobieramy czƒô≈õƒá konspektu, czyli nag≈Ç√≥wek dla tych element√≥w oraz dobieramy przedmiot, dla kt√≥rego tworzony jest konspekt np. dla przedmiotu ‚ÄûBazy Danych 2‚Äù i czƒô≈õci konspektu ‚ÄûWyk≈Çad‚Äù, element konspektu zawiera tre≈õƒá ‚ÄûZakres projektu‚Äù.';
 
 CREATE INDEX elementy_konspektu__idx ON
     elementy_konspektu (
@@ -69,10 +69,10 @@ CREATE TABLE "Kategorie tematyczne" (
 LOGGING;
 
 COMMENT ON TABLE "Kategorie tematyczne" IS
-    'Zawiera wszystkie dostÍpne kategorie tematyczne, wzglÍdem ktÛrych przedmioty sπ podzielone i pogrupowane np. Przedmioty ekonomiczno - spo≥eczne.';
+    'Zawiera wszystkie dostƒôpne kategorie tematyczne, wzglƒôdem kt√≥rych przedmioty sƒÖ podzielone i pogrupowane np. Przedmioty ekonomiczno - spo≈Çeczne.';
 
 COMMENT ON COLUMN "Kategorie tematyczne".kod_kategorii IS
-    'Kod, ktÛry s≥uøy do rozrÛøniania kategorii tematycznych np. MAT - skrÛcona nazwa kategorii tematycznej Matematyka.';
+    'Kod, kt√≥ry s≈Çu≈ºy do rozr√≥≈ºniania kategorii tematycznych np. MAT - skr√≥cona nazwa kategorii tematycznej Matematyka.';
 
 GRANT DELETE, INSERT, SELECT, UPDATE ON "Kategorie tematyczne" TO bd2c007_app;
 
@@ -88,10 +88,10 @@ CREATE TABLE kierunki (
 LOGGING;
 
 COMMENT ON TABLE kierunki IS
-    'Zawiera wszystkie dostÍpne kierunki w szkole wyøszej np. Informatyka.';
+    'Zawiera wszystkie dostƒôpne kierunki w szkole wy≈ºszej np. Informatyka.';
 
 COMMENT ON COLUMN kierunki.kod_kierunku IS
-    'Kod, ktÛry s≥uøy do rozrÛøniania kierunkÛw np. INF - skrÛcona nazwa kierunku informatyka.';
+    'Kod, kt√≥ry s≈Çu≈ºy do rozr√≥≈ºniania kierunk√≥w np. INF - skr√≥cona nazwa kierunku informatyka.';
 
 GRANT DELETE, INSERT, SELECT, UPDATE ON kierunki TO bd2c007_app;
 
@@ -109,10 +109,10 @@ CREATE TABLE przedmioty (
 LOGGING;
 
 COMMENT ON TABLE przedmioty IS
-    'Zawiera wszystkie dostÍpne przedmioty w szkole wyøszej. Przedmioty sπ przypisane do kierunkÛw, podzielone na kategorie tematyczne oraz moøemy utworzyÊ dla kaødego przedmiotu konspekt o standardowej budowie.';
+    'Zawiera wszystkie dostƒôpne przedmioty w szkole wy≈ºszej. Przedmioty sƒÖ przypisane do kierunk√≥w, podzielone na kategorie tematyczne oraz mo≈ºemy utworzyƒá dla ka≈ºdego przedmiotu konspekt o standardowej budowie.';
 
 COMMENT ON COLUMN przedmioty.kod_przedmiotu IS
-    'Kod, ktÛry s≥uøy do rozrÛøniania przedmiotÛw np. BD2 - skrÛcona nazwa przedmiotu Bazy danych 2.';
+    'Kod, kt√≥ry s≈Çu≈ºy do rozr√≥≈ºniania przedmiot√≥w np. BD2 - skr√≥cona nazwa przedmiotu Bazy danych 2.';
 
 CREATE INDEX przedmioty_kier_idx ON
     przedmioty (
@@ -163,8 +163,8 @@ END;
 
 
 
--- Oracle SQL Developer Data Modeler Summary Report: 
--- 
+-- Oracle SQL Developer Data Modeler Summary Report:
+--
 -- CREATE TABLE                             5
 -- CREATE INDEX                             3
 -- ALTER TABLE                             14
@@ -193,15 +193,15 @@ END;
 -- CREATE SYNONYM                           0
 -- CREATE TABLESPACE                        0
 -- CREATE USER                              2
--- 
+--
 -- DROP TABLESPACE                          0
 -- DROP DATABASE                            0
--- 
+--
 -- REDACTION POLICY                         0
--- 
+--
 -- ORDS DROP SCHEMA                         0
 -- ORDS ENABLE SCHEMA                       0
 -- ORDS ENABLE OBJECT                       0
--- 
+--
 -- ERRORS                                   0
 -- WARNINGS                                 0
