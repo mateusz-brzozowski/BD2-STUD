@@ -155,6 +155,8 @@ ALTER TABLE przedmioty
 
 CREATE OR REPLACE TRIGGER fkntm_elementy_konspektu BEFORE
     UPDATE OF kod_czesci, kod_przedmiotu ON elementy_konspektu
+    FOR EACH ROW
+    WHEN (old.kod_czesci != new.kod_czesci OR old.kod_przedmiotu != new.kod_przedmiotu)
 BEGIN
     raise_application_error(-20225, 'Non Transferable FK constraint  on table Elementy_konspektu is violated');
 END;
