@@ -19,7 +19,7 @@ START WITH 1000  INCREMENT BY 1000 MINVALUE 1000 MAXVALUE 99999 NOCACHE ORDER;
 CREATE TABLE czesci_konspektu (
     kod_czesci VARCHAR2(6) NOT NULL,
     nr_kolejny NUMBER(5) DEFAULT ON NULL nr_kolejny_seq.NEXTVAL NOT NULL,
-    tytuł      VARCHAR2(50) NOT NULL
+    tytul      VARCHAR2(50) NOT NULL
 )
 LOGGING;
 
@@ -38,12 +38,12 @@ ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_pk PRIMARY KEY ( ko
 
 ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_nr_kolejny_un UNIQUE ( nr_kolejny );
 
-ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_tytuł_un UNIQUE ( tytuł );
+ALTER TABLE czesci_konspektu ADD CONSTRAINT czesci_konspektu_tytul_un UNIQUE ( tytul );
 
 CREATE TABLE elementy_konspektu (
     kod_przedmiotu VARCHAR2(8) NOT NULL,
     kod_czesci     VARCHAR2(6) NOT NULL,
-    treść          VARCHAR2(4000)
+    tresc          VARCHAR2(4000)
 )
 LOGGING;
 
