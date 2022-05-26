@@ -19,6 +19,7 @@ CREATE OR REPLACE SYNONYM kierunki FOR bd2c007.kierunki;
 
 CREATE OR REPLACE SYNONYM przedmioty FOR bd2c007.przedmioty;
 
+CREATE OR REPLACE SYNONYM nr_kolejny_seq FOR bd2c007.nr_kolejny_seq;
 
 
 -- Oracle SQL Developer Data Modeler Summary Report:
