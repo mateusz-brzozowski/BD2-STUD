@@ -49,7 +49,7 @@ CREATE OR REPLACE SYNONYM nr_kolejny_seq FOR bd2c007.nr_kolejny_seq;
 -- CREATE SEQUENCE                          0
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE MATERIALIZED VIEW LOG             0
--- CREATE SYNONYM                           5
+-- CREATE SYNONYM                           6
 -- CREATE TABLESPACE                        0
 -- CREATE USER                              0
 --

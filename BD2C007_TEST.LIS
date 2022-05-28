@@ -1,0 +1,219 @@
+SQL> 
+SQL> -- Przedmioty dostêpne na kierunku 'Informatyka'
+SQL> 
+SQL> SELECT p.nazwa
+  2  FROM przedmioty p
+  3  JOIN kierunki k USING(kod_kierunku)
+  4  WHERE k.nazwa = 'Informatyka';
+
+NAZWA                                             
+--------------------------------------------------
+Analiza matematyczna
+Matematyka konkretna 1
+Matematyka konkretna 2
+Probabilistyka
+Podstawy techniki cyfrowej
+Architektura komputerów
+Wstêp do automatyki i elektroniki
+Systemy komputerowe w sterowaniu i pomiarach
+Podstawy informatyki i programowania
+Projekt zespo³owy pierwszy
+Programowanie obiektowe
+Programowanie aplikacyjne
+Sztuka wytwarzania oprogramowania
+Programowanie sieciowe
+Projekt zespo³owy drugi
+Paradygmaty programowania
+Algorytmy i struktury danych
+Sieci komputerowe
+Wprowadzenie do sztucznej inteligencji
+Systemy operacyjne
+Bazy danych 1
+Wprowadzenie do systemów zarz¹dzania
+Wstêp do multimediów
+Bezpieczeñstwo systemów i sieci
+Bazy danych 2
+Fizyka ogólna
+Fizyczne podstawy przetwarzania informacji
+Zarz¹dzanie projektami informatycznymi
+Wdra¿anie i utrzymanie systemów informatycznych
+Techniki kompilacji
+Przeszukiwanie i optymalizacja
+Sztuczne sieci neuronowe
+Uczenie maszynowe
+
+33 rows selected. 
+
+SQL> 
+SQL> -- Konspekt dla przedmiotu 'Fizyka ogólna' w ustalonej kolejnoœci
+SQL> 
+SQL> SELECT ck.tytul, ek.tresc
+  2  FROM elementy_konspektu ek
+  3  JOIN przedmioty p USING(kod_przedmiotu)
+  4  JOIN czesci_konspektu ck USING(kod_czesci)
+  5  WHERE p.nazwa = 'Fizyka ogólna'
+  6  ORDER BY ck.nr_kolejny ASC;
+
+TYTUL
+--------------------------------------------------
+TRESC                                                                                                                                                                                                                                                                                                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Opis                                               
+Celem przedmiotu jest zapoznanie studentów z podstawami mechaniki klasycznej                                                                                                                                                                                                                                
+
+Wyk³ad                                             
+1. Drgania 2. Fale 3. Teoria pola 4. Pole elektryczne                                                                                                                                                                                                                                                       
+
+Laboratorium                                       
+Numeryczne rozwi¹zanie równania falowego                                                                                                                                                                                                                                                                    
+
+Æwiczenia                                          
+Ruch drgaj¹cy, oscylator harmoniczny, rezonans                                                                                                                                                                                                                                                              
+
+Literatura                                         
+D. Halliday, R. Resnick, J. Walker, Podstawy fizyki, t.1-4, Wyd. Naukowe PWN                                                                                                                                                                                                                                
+
+Metody i kryteria oceniania                        
+ocenê wiedzy i umiejêtnoœci wykazanych na egzaminie pisemnym o charakterze problemowym                                                                                                                                                                                                                      
+
+
+6 rows selected. 
+
+SQL> 
+SQL> -- Lista dostêpnych czêœci konspektu, jakie mo¿emy wykorzystaæ piszac konspekt
+SQL> 
+SQL> SELECT ck.tytul
+  2  FROM czesci_konspektu ck;
+
+TYTUL                                             
+--------------------------------------------------
+Laboratorium
+Literatura
+Metody i kryteria oceniania
+Opis
+Wyk³ad
+Æwiczenia
+
+6 rows selected. 
+
+SQL> 
+SQL> -- Dostêpne kierunki
+SQL> 
+SQL> SELECT k.nazwa
+  2  FROM kierunki k;
+
+NAZWA                                                                                               
+----------------------------------------------------------------------------------------------------
+Automatyka i robotyka
+Cyberbezpieczeñstwo
+Elektronika
+Informatyka
+In¿ynieria biomedyczna
+In¿ynieria internetu rzeczy
+Telekomunikacja
+
+7 rows selected. 
+
+SQL> 
+SQL> -- Literatura wykorzystywana na kierunku 'Informatyka'
+SQL> 
+SQL> SELECT ek.tresc
+  2  FROM elementy_konspektu ek
+  3  JOIN czesci_konspektu ck USING(kod_czesci)
+  4  JOIN przedmioty p USING(kod_przedmiotu)
+  5  JOIN kierunki k ON(p.kod_kierunku = k.kod_kierunku)
+  6  WHERE ck.tytul = 'Literatura' AND k.nazwa = 'Informatyka';
+
+TRESC                                                                                                                                                                                                                                                                                                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+R. Rudnicki, Wyk³ady z analizy matematycznej, PWN 2001
+Skorupski A.: Podstawy techniki cyfrowej, WK£, Warszawa, 2004
+Niebezpiecznik, https://niebezpiecznik.pl/
+D. Halliday, R. Resnick, J. Walker, Podstawy fizyki, t.1-4, Wyd. Naukowe PWN
+
+SQL> 
+SQL> -- Liczba przedmiotów w ka¿dej kategorii tematycznej
+SQL> 
+SQL> SELECT kt.nazwa, COUNT(*)
+  2  FROM przedmioty p
+  3  JOIN kategorie_tematyczne kt USING(kod_kategorii)
+  4  GROUP BY kod_kategorii, kt.nazwa;
+
+NAZWA                                                                                                  COUNT(*)
+---------------------------------------------------------------------------------------------------- ----------
+Przedmioty specjalnoœci IOP                                                                                   3
+Fizyka                                                                                                        4
+Metody wytwarzania oprogramowania                                                                             8
+Podstawy informatyki                                                                                          9
+Przedmioty specjalnoœci SZI                                                                                   3
+Teleinformatyka                                                                                               5
+Matematyka                                                                                                    8
+Architektura komputerów i sprzêt komputerowy                                                                  4
+Informatyka techniczna                                                                                        7
+Podstawy elektroniki i telekomunikacji                                                                        4
+Cyberbezpieczeñstwo                                                                                           6
+
+11 rows selected. 
+
+SQL> 
+SQL> -- Liczba przedmiotów na kierunkach
+SQL> 
+SQL> SELECT k.nazwa, COUNT(*)
+  2  FROM przedmioty p
+  3  JOIN kierunki k USING(kod_kierunku)
+  4  GROUP BY kod_kierunku, k.nazwa;
+
+NAZWA                                                                                                  COUNT(*)
+---------------------------------------------------------------------------------------------------- ----------
+Informatyka                                                                                                  33
+Cyberbezpieczeñstwo                                                                                          28
+
+SQL> 
+SQL> -- Przedmioty na kierunku 'Informatyka' podzielone na kierunki tematyczne
+SQL> 
+SQL> SELECT kt.nazwa, p.nazwa
+  2  FROM przedmioty p
+  3  JOIN kategorie_tematyczne kt USING(kod_kategorii)
+  4  JOIN kierunki k USING(kod_kierunku)
+  5  WHERE k.nazwa = 'Informatyka';
+
+NAZWA                                                                                                NAZWA                                             
+---------------------------------------------------------------------------------------------------- --------------------------------------------------
+Matematyka                                                                                           Analiza matematyczna                              
+Matematyka                                                                                           Matematyka konkretna 1                            
+Matematyka                                                                                           Matematyka konkretna 2                            
+Matematyka                                                                                           Probabilistyka                                    
+Architektura komputerów i sprzêt komputerowy                                                         Podstawy techniki cyfrowej                        
+Architektura komputerów i sprzêt komputerowy                                                         Architektura komputerów                           
+Architektura komputerów i sprzêt komputerowy                                                         Wstêp do automatyki i elektroniki                 
+Architektura komputerów i sprzêt komputerowy                                                         Systemy komputerowe w sterowaniu i pomiarach      
+Metody wytwarzania oprogramowania                                                                    Podstawy informatyki i programowania              
+Metody wytwarzania oprogramowania                                                                    Projekt zespo³owy pierwszy                        
+Metody wytwarzania oprogramowania                                                                    Programowanie obiektowe                           
+Metody wytwarzania oprogramowania                                                                    Programowanie aplikacyjne                         
+Metody wytwarzania oprogramowania                                                                    Sztuka wytwarzania oprogramowania                 
+Metody wytwarzania oprogramowania                                                                    Programowanie sieciowe                            
+Metody wytwarzania oprogramowania                                                                    Projekt zespo³owy drugi                           
+Metody wytwarzania oprogramowania                                                                    Paradygmaty programowania                         
+Podstawy informatyki                                                                                 Algorytmy i struktury danych                      
+Podstawy informatyki                                                                                 Sieci komputerowe                                 
+Podstawy informatyki                                                                                 Wprowadzenie do sztucznej inteligencji            
+Podstawy informatyki                                                                                 Systemy operacyjne                                
+Podstawy informatyki                                                                                 Bazy danych 1                                     
+Podstawy informatyki                                                                                 Wprowadzenie do systemów zarz¹dzania              
+Podstawy informatyki                                                                                 Wstêp do multimediów                              
+Podstawy informatyki                                                                                 Bezpieczeñstwo systemów i sieci                   
+Podstawy informatyki                                                                                 Bazy danych 2                                     
+Fizyka                                                                                               Fizyka ogólna                                     
+Fizyka                                                                                               Fizyczne podstawy przetwarzania informacji        
+Przedmioty specjalnoœci IOP                                                                          Zarz¹dzanie projektami informatycznymi            
+Przedmioty specjalnoœci IOP                                                                          Wdra¿anie i utrzymanie systemów informatycznych   
+Przedmioty specjalnoœci IOP                                                                          Techniki kompilacji                               
+Przedmioty specjalnoœci SZI                                                                          Przeszukiwanie i optymalizacja                    
+Przedmioty specjalnoœci SZI                                                                          Sztuczne sieci neuronowe                          
+Przedmioty specjalnoœci SZI                                                                          Uczenie maszynowe                                 
+
+33 rows selected. 
+
+SQL> 
+SQL> spool off

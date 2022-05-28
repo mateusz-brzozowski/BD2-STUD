@@ -1,0 +1,173 @@
+SQL> 
+SQL> -- TEST SEKWENCJI
+SQL> 
+SQL> -- test sekwencji 'NR_KOLEJNY_SEQ' - dodanie nowej czesci konspektu
+SQL> 
+SQL> INSERT INTO czesci_konspektu VALUES ('CK', NULL, 'Czêœæ konspektu');
+
+1 row inserted.
+
+SQL> 
+SQL> SELECT nr_kolejny
+  2  FROM czesci_konspektu
+  3  WHERE kod_czesci = 'CK';
+
+NR_KOLEJNY
+----------
+       700
+
+SQL> 
+SQL> ROLLBACK;
+
+Rollback complete.
+
+SQL> 
+SQL> -- TEST KASKADY KASOWANIA
+SQL> 
+SQL> -- usuniêcie przedmiotu, powinno spowodowaæ usuniêcie jego konepsktu
+SQL> 
+SQL> DELETE FROM przedmioty
+  2  WHERE kod_przedmiotu = 'FO';
+
+1 row deleted.
+
+SQL> 
+SQL> SELECT *
+  2  FROM elementy_konspektu
+  3  WHERE kod_przedmiotu = 'FO';
+no rows selected
+SQL> 
+SQL> ROLLBACK;
+
+Rollback complete.
+
+SQL> 
+SQL> -- TESTY UNIQUE KEY
+SQL> 
+SQL> INSERT INTO kierunki VALUES ('TEST', 'Informatyka', NULL);
+
+Error starting at line : 33 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO kierunki VALUES ('TEST', 'Informatyka', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.KIERUNKI_NAZWA_UN)
+
+SQL> 
+SQL> INSERT INTO kategorie_tematyczne VALUES ('TEST', 'Matematyka', NULL);
+
+Error starting at line : 35 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO kategorie_tematyczne VALUES ('TEST', 'Matematyka', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.KATEGORIE_TEMATYCZNE_NAZWA_UN)
+
+SQL> 
+SQL> INSERT INTO czesci_konspektu VALUES ('TEST', 100, 'TEST');
+
+Error starting at line : 37 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO czesci_konspektu VALUES ('TEST', 100, 'TEST')
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.CZESCI_KONSPEKTU_NR_KOLEJNY_UN)
+
+SQL> 
+SQL> INSERT INTO czesci_konspektu VALUES ('TEST', NULL, 'Opis');
+
+Error starting at line : 39 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO czesci_konspektu VALUES ('TEST', NULL, 'Opis')
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.CZESCI_KONSPEKTU_TYTUL_UN)
+
+SQL> 
+SQL> INSERT INTO przedmioty VALUES ('TEST', 'Analiza matematyczna', 'INF', 'MAT', NULL);
+
+Error starting at line : 41 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO przedmioty VALUES ('TEST', 'Analiza matematyczna', 'INF', 'MAT', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.PRZEDMIOTY_NAZWA_UN)
+
+SQL> 
+SQL> -- TESTY PRIMARY KEY
+SQL> 
+SQL> INSERT INTO kierunki VALUES ('INF', 'TEST', NULL);
+
+Error starting at line : 45 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO kierunki VALUES ('INF', 'TEST', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.KIERUNKI_PK)
+
+SQL> 
+SQL> INSERT INTO kategorie_tematyczne VALUES ('MAT', 'TEST', NULL);
+
+Error starting at line : 47 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO kategorie_tematyczne VALUES ('MAT', 'TEST', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.KATEGORIE_TEMATYCZNE_PK)
+
+SQL> 
+SQL> INSERT INTO przedmioty VALUES ('AM', 'TEST', 'INF', 'MAT', NULL);
+
+Error starting at line : 49 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO przedmioty VALUES ('AM', 'TEST', 'INF', 'MAT', NULL)
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.PRZEDMIOTY_PK)
+
+SQL> 
+SQL> INSERT INTO czesci_konspektu VALUES ('OP', NULL, 'TEST');
+
+Error starting at line : 51 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO czesci_konspektu VALUES ('OP', NULL, 'TEST')
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.CZESCI_KONSPEKTU_PK)
+
+SQL> 
+SQL> INSERT INTO elementy_konspektu VALUES ('AM', 'OP', 'TEST');
+
+Error starting at line : 53 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+INSERT INTO elementy_konspektu VALUES ('AM', 'OP', 'TEST')
+Error report -
+ORA-00001: naruszono wiêzy unikatowe (BD2C007.ELEMENTY_KONSPEKTU_PK)
+
+SQL> 
+SQL> -- TESTY WYZWALACZY
+SQL> 
+SQL> -- test wyzwalacza 'FKNTM_ELEMENTY_KONSPEKTU' - zmiana nietransferowalnego klucza obcego
+SQL> 
+SQL> UPDATE elementy_konspektu
+  2  SET kod_przedmiotu = 'MAT'
+  3  WHERE kod_czesci = 'OP';
+
+Error starting at line : 59 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+UPDATE elementy_konspektu
+SET kod_przedmiotu = 'MAT'
+WHERE kod_czesci = 'OP'
+Error report -
+ORA-20225: Non Transferable FK constraint  on table Elementy_konspektu is violated
+ORA-06512: przy "BD2C007.FKNTM_ELEMENTY_KONSPEKTU", linia 2
+ORA-04088: b³¹d w trakcie wykonywania wyzwalacza 'BD2C007.FKNTM_ELEMENTY_KONSPEKTU'
+
+SQL> 
+SQL> UPDATE elementy_konspektu
+  2  SET kod_czesci = 'OP'
+  3  WHERE kod_przedmiotu = 'AM';
+
+Error starting at line : 63 File @ C:\Users\huawei\AppData\Roaming\SQL Developer\dml_test.sql
+In command -
+UPDATE elementy_konspektu
+SET kod_czesci = 'OP'
+WHERE kod_przedmiotu = 'AM'
+Error report -
+ORA-20225: Non Transferable FK constraint  on table Elementy_konspektu is violated
+ORA-06512: przy "BD2C007.FKNTM_ELEMENTY_KONSPEKTU", linia 2
+ORA-04088: b³¹d w trakcie wykonywania wyzwalacza 'BD2C007.FKNTM_ELEMENTY_KONSPEKTU'
+
+SQL> 
+SQL> spool off
